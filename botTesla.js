@@ -173,13 +173,13 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
- 	Sizcə bu kişi neçə yaşındadı❓
+ 	Sizcə bu kişi neçə yaşındadı🤔❓
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
 			""
 		}
-		${"◾️".repeat(time)}${"▫️".repeat(config.emojiSaniye - time)}
+		${"◾".repeat(time)}${"▫️".repeat(config.emojiSaniye - time)}
 	`)
 }
 const OyunHusnuEhedov = (ctx, chatId) => {
