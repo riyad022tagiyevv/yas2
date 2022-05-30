@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam👋🏻 \n ElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
+    *Salam👋🏻 \n azoyunbot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
     ${isGroup ? "" : " \n *Əmirlərinə Bax /help*"}
 `)
 
