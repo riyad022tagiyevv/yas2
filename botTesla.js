@@ -318,7 +318,7 @@ bot.command("stop", (ctx) => {
 
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
 
-bot.command("top", (ctx) => {
+bot.command("trating", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
@@ -400,7 +400,7 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
         *Salam! "Təxmin" oyunu ücün\n Yaranmış bir botam🤖*\n🆘*Bot Sadəcə gruplar üçün hazırlanmışdır!* \n\n _ℹ️Əmirlər Bunlardı_ : \n\n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂, \n\n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegand əmrini işə salın. \n\n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣 \n _Sonra Əmirlər ilə oyunu başladın_🎯 \n
-          *Əmirlərik Bunlardı* \n\n 🎲 /elegand - _Oyunu Başlat_ \n ⛔️ /stop - _Oyunu durdurmak_ \n 📊 /top - _Oyuncuların puanı gösterir_ \n _🌍 /global - Global Puanlar_ \n ℹ️ /help - _Size yardım edicek_ \n 👤 /kullanici - _Kullanıcı hakkında bilgi_ \n 🆔 /id - _Grup infosu_`))
+          *Əmirlərik Bunlardı* \n\n 🎲 /elegand - _Oyunu Başlat_ \n ⛔️ /stop - _Oyunu durdurmak_ \n 📊 /trating - _Oyuncuların puanı gösterir_ \n _🌍 /global - Global Puanlar_ \n ℹ️ /help - _Size yardım edicek_ \n 👤 /kullanici - _Kullanıcı hakkında bilgi_ \n 🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
