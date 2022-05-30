@@ -318,7 +318,7 @@ bot.command("stop", (ctx) => {
 
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
 
-bot.command("ttrating", (ctx) => {
+bot.command("trating", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
