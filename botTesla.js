@@ -80,8 +80,8 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam👋🏻\nElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
-    ${isGroup ? "" : "\n*Temel komutların listesi için /help*"}
+    *Salam👋🏻 \n ElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
+    ${isGroup ? "" : " \n *Əmirlərinə Bax /help*"}
 `)
 
 
@@ -154,7 +154,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /elegand")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻 \n Oyunu Başlat ➡️  /elegand")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -280,7 +280,7 @@ bot.command("elegand", (ctx) => {
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("❗️ Oyun Hal-Hazırda Aktivdi Oyunu Durdurmaq Üçün /stop.")
+				return ctx.reply("❗️ Oyun Hal-Hazırda Aktivdi Oyunu Durdurmaq Üçün /stop .")
 			}
 			else {
 				chat.isPlaying = true
@@ -294,11 +294,11 @@ bot.command("elegand", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindan,\n\nYaş Təxmin Oyunu Başladı 🎉</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindan,\n\n Yaş Təxmin Oyunu Başladı 🎉</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
-		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır\n\n📣 Kanalımıza gözləyirik @SecretMMC")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
 	}
 })
 
@@ -311,7 +311,7 @@ bot.command("stop", (ctx) => {
         OyunDurdurHusnuEhedov(ctx, chatId)
     }
     else {
-        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır\n\n📣 Kanalımıza gözləyirik @SecretMMC")
+        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
     }
 })
 
@@ -345,15 +345,15 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 				`))
 			}
 			else {
-				ctx.reply("❗️ Bu grupta hiç oyun oynamadınız")
+				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
 			}
 		}
 		else {
-			ctx.reply("🛑 Bu komut gruplar için geçerli")
+			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
 		}
 	}
 	else {
-		ctx.reply("🛑 Bu komut gruplar için geçerli")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
 	}
 })
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING SON --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
@@ -363,7 +363,7 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 
 
 /// /// /// /// /// /// ///  <!-- GLOBAL KULLANICI RATING --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
-bot.command("g", (ctx) => {
+bot.command("global", (ctx) => {
     fs.readFile(dbfile, 'utf8', async function(err, doc) {
         var comments = doc.match(/-100\d+/g)
         let top = []
@@ -386,7 +386,7 @@ bot.command("g", (ctx) => {
             }
             if (top.length > 0) {
                 ctx.replyWithHTML(Degisken(`
-     <b>🎖Gruplar Üzre En İyi Top-20</b>\n
+     <b>🎖Global Üzrə En Yaxşı Oyunçular</b>\n
 ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} → ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
                 `))
             }
@@ -397,10 +397,10 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 
 
-bot.command("yardim", (ctx) => {
+bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *Merhaba! "Tahimin" oyunu için\noluşturulmuş bir botum🤖*\n🆘*Bot yalnızca gruplar için tasarlanmıştır!*\n\n_ℹ️Kurallar budur : Sana resimler atıyorum ve sen kategoriye uyğun rakamlarla tahmin etmelisin🕵🏼‍♂️,İlk olarak qrupa ekle ve Grupda medya izini açık olsun unutma! veya Botu yönetici yapın_🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Temel Komutların Listesi👇🏻*\n\n🎲 /game - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /g - Global Puanlar_\nℹ️ /yardim - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
+        *Salam! "Təxmin" oyunu ücün\n Yaranmış bir botam🤖*\n🆘*Bot Sadəcə gruplar üçün hazırlanmışdır!* \n\n _ℹ️Əmirlər Bunlardı_ : \n\n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂, \n\n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegant əmrini işə salın. \n\n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣 \n _Sonra Əmirlər ilə oyunu başladın_🎯 \n
+          *Əmirlərik Bunlardı* \n\n 🎲 /elegand - _Oyunu Başlat_ \n ⛔️ /stop - _Oyunu durdurmak_ \n 📊 /top - _Oyuncuların puanı gösterir_ \n _🌍 /global - Global Puanlar_ \n ℹ️ /help - _Size yardım edicek_ \n 👤 /kullanici - _Kullanıcı hakkında bilgi_ \n 🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
@@ -432,8 +432,8 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/ElegandGameBot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -441,12 +441,12 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
+    ctx.replyWithMarkdown(`*Salam👋🏻 \n ElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖* \n *Əmirlərimə Bax /help*"*
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`t.me/ElegandGameBot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -473,8 +473,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/husnublog'}],
-                [{text:'2) Qrup ', url:'t.me/husnublog'}],
+                [{text:'1) Qrup ', url:'t.me/SecretMMC'}],
+                [{text:'2) Qrup ', url:'t.me/SecretMMC'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -489,8 +489,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/husnublog'}],
-                [{text:'2) Grub', url:'t.me/husnublog'}],
+                [{text:'1) Grub', url:'t.me/SecretMMC'}],
+                [{text:'2) Grub', url:'t.'SecretMMC'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
