@@ -80,8 +80,8 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
-    ${isGroup ? "" : "\n*Temel komutların listesi için /yardim*"}
+    *Salam👋🏻\nElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
+    ${isGroup ? "" : "\n*Temel komutların listesi için /help*"}
 `)
 
 
@@ -147,14 +147,14 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		db.update(chatId, ch => chat)
 		if (top.length > 0) {
 			ctx.replyWithMarkdown(Degisken(`
-				*🌟 Kazananlar Sıralaması:*
+				*🌟 Qazanan Oyunçular:*
 
 				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan 🎁", "puan 🎁", "puan 🎁")}`).join("\n")}
 			`))
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /game")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /elegand")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -173,7 +173,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
-		❓ Sizce bu kişi kaç yaşında
+ 	Sizcə bu kişi neçə yaşındadı❓
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
@@ -235,7 +235,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			if (!top.every(member => member.answer === null)) {
 				ctx.replyWithMarkdown(
 					Degisken(`
-						✅ Fotoğraftaki Kişi: *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Puan Kazananlar:*
+						✅ Şəkildəki Kişi: *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Puan Kazananlar:*
 
 						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
@@ -245,7 +245,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("Cevap verilmedi, Oyun Durduruldu❕")
+				ctx.reply("Cavab verilmədi, Oyun Durduruldu❕")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -273,14 +273,14 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 
 
 
-bot.command("game", (ctx) => {
+bot.command("elegand", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("❗️ Oyun şuan aktif, durdurmak için /stop.")
+				return ctx.reply("❗️ Oyun Hal-Hazırda Aktivdi Oyunu Durdurmaq Üçün /stop.")
 			}
 			else {
 				chat.isPlaying = true
@@ -294,11 +294,11 @@ bot.command("game", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tarafından,\n\nYaş Tahmin Oyunu Başladı 🎉</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindan,\n\nYaş Təxmin Oyunu Başladı 🎉</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
-		ctx.reply("🛑 Bu komut gruplar için geçerli")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır\n\n📣 Kanalımıza gözləyirik @SecretMMC")
 	}
 })
 
@@ -311,7 +311,7 @@ bot.command("stop", (ctx) => {
         OyunDurdurHusnuEhedov(ctx, chatId)
     }
     else {
-        ctx.reply("🛑 Bu komut gruplar için geçerli")
+        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır\n\n📣 Kanalımıza gözləyirik @SecretMMC")
     }
 })
 
@@ -339,7 +339,7 @@ bot.command("top", (ctx) => {
 			})
 			if (top.length > 0) {
 				ctx.replyWithMarkdown(Degisken(`
-*✅ Grup En İyi TOP 20 Oyuncu:*
+*✅ Grupun Ən Yaxşı 20 Oyunçusu:*
 
 ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan🎁", "puan🎁", "puan🎁")}`).join("\n")}
 				`))
