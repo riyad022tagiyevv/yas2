@@ -490,7 +490,7 @@ bot.action('TR', ctx=>{
         reply_markup:{
             inline_keyboard:[
                 [{text:'1) Grub', url:'t.me/SecretMMC'}],
-                [{text:'2) Grub', url:'t.'SecretMMC'}],
+                [{text:'2) Grub', url:'t.me/SecretMMC'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
