@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam👋🏻 \n azoyunbot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖*
+    *Salam👋🏻 \n azoyunbot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyam🤖*
     ${isGroup ? "" : " \n *Əmirlərinə Bax /help*"}
 `)
 
@@ -298,7 +298,7 @@ bot.command("elegand", (ctx) => {
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
-		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
 	}
 })
 
@@ -311,7 +311,7 @@ bot.command("stop", (ctx) => {
         OyunDurdurHusnuEhedov(ctx, chatId)
     }
     else {
-        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
+        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
     }
 })
 
@@ -345,15 +345,15 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 				`))
 			}
 			else {
-				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
+				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
 			}
 		}
 		else {
-			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
+			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
 		}
 	}
 	else {
-		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @SecretMMC")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
 	}
 })
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING SON --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
@@ -432,8 +432,8 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/ElegandGameBot?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`http://t.me/azoyunbot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/VusalinBlogu`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -445,8 +445,8 @@ bot.action('start', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/ElegandGameBot?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`http://t.me/azoyunbot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/VusalinBlogu`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -456,7 +456,7 @@ bot.action('start', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🌍 Ülkeler*`,{
+    ctx.replyWithMarkdown(`*🌍 Ölkələr*`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
@@ -473,8 +473,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/SecretMMC'}],
-                [{text:'2) Qrup ', url:'t.me/SecretMMC'}],
+                [{text:'1) Qrup ', url:'t.me/AzeSohbetGurupu'}],
+                [{text:'2) Qrup ', url:'t.me/VusalinBlogu'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -489,8 +489,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/SecretMMC'}],
-                [{text:'2) Grub', url:'t.me/SecretMMC'}],
+                [{text:'1) Grub', url:'t.me/AzeSohbetGurupu'}],
+                [{text:'2) Grub', url:'t.me/VusalinBlogu'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
