@@ -273,7 +273,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 
 
 
-bot.command("elegand", (ctx) => {
+bot.command("crazygame", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
@@ -298,7 +298,7 @@ bot.command("elegand", (ctx) => {
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
-		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @CrazyMMC")
 	}
 })
 
@@ -311,7 +311,7 @@ bot.command("stop", (ctx) => {
         OyunDurdurHusnuEhedov(ctx, chatId)
     }
     else {
-        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
+        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @CrazyMMC")
     }
 })
 
@@ -345,15 +345,15 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 				`))
 			}
 			else {
-				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
+				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @CrazyMMC")
 			}
 		}
 		else {
-			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
+			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @CrazyMMC")
 		}
 	}
 	else {
-		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @VusalinBlogu")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n 📣 Kanalımıza gözləyirik @CrazyMMC")
 	}
 })
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING SON --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
@@ -399,8 +399,8 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *Salam! "Təxmin" oyunu ücün\n Yaranmış bir botam🤖*\n🆘*Bot Sadəcə gruplar üçün hazırlanmışdır!* \n\n _ℹ️Əmirlər Bunlardı_ : \n\n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂, \n\n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegand əmrini işə salın. \n\n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣 \n _Sonra Əmirlər ilə oyunu başladın_🎯 \n
-          *Əmirlərik Bunlardı* \n\n 🎲 /elegand - _Oyunu Başlat_ \n ⛔️ /stop - _Oyunu durdurmak_ \n 📊 /trating - _Oyuncuların puanı gösterir_ \n _🌍 /global - Global Puanlar_ \n ℹ️ /help - _Size yardım edicek_ \n 👤 /kullanici - _Kullanıcı hakkında bilgi_ \n 🆔 /id - _Grup infosu_`))
+        *Salam! "Təxmin" oyunu ücün\n Yaranmış bir botam🤖*\n🆘*Bot Sadəcə gruplar üçün hazırlanmışdır!* \n\n _ℹ️Əmirlər Bunlardı_ : \n\n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂, \n\n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /crazygame əmrini işə salın. \n\n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣 \n _Sonra Əmirlər ilə oyunu başladın_🎯 \n
+          *Əmirlərik Bunlardı* \n\n 🎲 /crazygame - _Oyunu Başlat_ \n ⛔️ /stop - _Oyunu diyandırmaq_ \n 📊 /trating - _Oyunçuların xalın göstərir_ \n _🌍 /global - Global Xallar_ \n ℹ️ /help - _Sizə kömək dəcək_ \n 👤 /kullanici - Sizin hakkında məlumat_ \n 🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
