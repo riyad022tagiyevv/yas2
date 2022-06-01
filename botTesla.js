@@ -60,7 +60,7 @@ bot.command("grupsayi", async (ctx) => {
         if (comments && comments.length > 0) {
             await ctx.replyWithHTML(`<i>Grup sayısı:  ${comments.length}</i>`)
         } else {
-            ctx.reply('Botta henüz oyun oynanmadı.')
+            ctx.reply('Botda hələki oyun oynalınmayıb.')
         }
     })
 });
@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam👋🏻 \n azoyunbot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyam🤖*
+    *Salam👋🏻 \n 𝙲𝚁𝙰𝚉𝚈 𝚃𝙴𝚇𝙼𝙸𝙽 𝙶𝙰𝙼𝙴 Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyam🤖*
     ${isGroup ? "" : " \n *Əmirlərinə Bax /help*"}
 `)
 
@@ -441,12 +441,12 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Salam👋🏻 \n ElegandGameBot Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖* \n *Əmirlərimə Bax /help*"*
+    ctx.replyWithMarkdown(`*Salam👋🏻 \n 𝙲𝚁𝙰𝚉𝚈 𝚃𝙴𝚇𝙼𝙸𝙽 𝙶𝙰𝙼𝙴 Təxmin Oyunu Vaxtınızı Əyləncəli hala gətirimək üçün\nTelegram oyun botuyum🤖* \n *Əmirlərimə Bax /help*"*
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`http://t.me/azoyunbot?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/VusalinBlogu`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`http://t.me/CrazyTexminGameBot?startgroup=true`}],
+                [{text:'Rəsmi Kanalımız 📣', url:`https://t.me/crazy_resmi`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -473,8 +473,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/AzeSohbetGurupu'}],
-                [{text:'2) Qrup ', url:'t.me/VusalinBlogu'}],
+                [{text:'1) Qrup ', url:'https://t.me/CrazyTeam_s'}],
+                [{text:'2) Qrup ', url:'https://t.me/Crazymmc'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -489,8 +489,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/AzeSohbetGurupu'}],
-                [{text:'2) Grub', url:'t.me/VusalinBlogu'}],
+                [{text:'1) Grub', url:'https://t.me/CrazyTeam_s'}],
+                [{text:'2) Grub', url:'https://t.me/Crazymmc'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
