@@ -50,7 +50,7 @@ bot.command("txt", async (ctx) => {
     })
 });
 
-bot.command("qrupsayı", async (ctx) => {
+bot.command("qrup", async (ctx) => {
     fs.readFile(dbfile, 'utf8', async function(err, doc) {
         var comments = doc.match(/-100\d+/g);
         if (comments && comments.length > 0) {
