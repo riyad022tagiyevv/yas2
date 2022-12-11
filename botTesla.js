@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("❌ Oyun Başlamadı..\nOyunu Başlat ➡️  /games")
+		ctx.reply("❌ Oyun Başlamadı..\nOyunu Başlat ➡️  /xaosgame")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
