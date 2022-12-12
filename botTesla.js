@@ -41,7 +41,7 @@ bot.command("txt", async (ctx) => {
                 source: './gruplar.txt'
             }, {
                 filename: 'gruplar.txt',
-                caption: `<b>Grup Döküman:  ${comments.length}</b>`,
+                caption: `<b>Qrupların Sayı:  ${comments.length}</b>`,
                 parse_mode: 'HTML'
             })
         } else {
