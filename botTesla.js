@@ -428,7 +428,7 @@ bot.start(async (ctx) => {
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
                 [{text:'💻 𝐎 𝐖 𝐍 𝐄 𝐑 🇦🇿', url:`t.me/sesizKOLGE`}],
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}], 
-		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/bizimBakki`}], 
+		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/XaosDragonChat`}], 
 		[{text:'⚙ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
             ]
         }
@@ -444,7 +444,7 @@ bot.action('start', ctx=>{
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
                 [{text:'👨‍💻 𝕆𝕎ℕ𝔼ℝ 🇦🇿', url:`t.me/sesizKOLGE`}],
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
-		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/bizimBakki`}],
+		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/XaosDragonChat `}],
 		[{text:'⚙️ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
             ]
         }
