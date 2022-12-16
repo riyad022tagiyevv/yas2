@@ -380,7 +380,7 @@ bot.command("global", (ctx) => {
             if (top.length > 0) {
                 ctx.replyWithHTML(Degisken(`
      <b>🎖Qruplar üzrə ən yaxşı Top-20</b>\n
-${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} → ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
+${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "⭐"} ${index + 1}) <b><i>${member.firstName} → ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
                 `))
             }
         }
