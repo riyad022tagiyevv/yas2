@@ -239,7 +239,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("❌ Cavab Yoxdur\n✅ Oyun Sonlandırıldı❕")
+				ctx.reply("❌ Cavab Yoxdur\n✅ Oyun Sonlandırıldı❕\nYenidən Oynamq Üçün  /Xaosgame ")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -428,8 +428,8 @@ bot.start(async (ctx) => {
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
                 [{text:'💻 𝐎 𝐖 𝐍 𝐄 𝐑 🇦🇿', url:`t.me/sesizKOLGE`}],
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}], 
-		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/XaosDragonChat`}], 
-		[{text:'⚙ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
+		[{text:'⚡𝕏𝔸𝕆𝕊  𝔽𝔹𝔸ℕ', url:`t.me/XaosResmii`}], 
+		[{text:'⚙ 𝕐𝔸ℝ𝔻𝕀𝕄 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
             ]
         }
     })
@@ -444,7 +444,7 @@ bot.action('start', ctx=>{
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
                 [{text:'👨‍💻 𝕆𝕎ℕ𝔼ℝ 🇦🇿', url:`t.me/sesizKOLGE`}],
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
-		[{text:'💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', url:`t.me/XaosDragonChat `}],
+		[{text:'⚡𝕏𝔸𝕆𝕊  𝔽𝔹𝔸ℕ', url:`t.me/XaosResmii`}], 
 		[{text:'⚙️ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
             ]
         }
@@ -455,7 +455,7 @@ bot.action('start', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*    ⚙️ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌*`,{
+    ctx.replyWithMarkdown(`*    ⚙️ 𝕐𝔸ℝ𝔻𝕀𝕄 𝕄𝔼𝕐ℕ𝕌𝕊𝕌*`,{
         reply_markup:{
             inline_keyboard:[
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
