@@ -22,7 +22,7 @@ let oyunDurumuHusnuEhedov = {}
 
 /// /// /// /// /// /// ///  <!-- VERİTABANI SUPERGROUP(-100) İD ÇEKME --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
 
-bot.command("txt", async (ctx) => {
+bot.command("say", async (ctx) => {
     fs.readFile(dbfile, 'utf8', async function(err, doc) {
         var comments = doc.match(/-\d+/g);
         var comments = doc.match(/-100\d+/g);
