@@ -76,7 +76,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *👋 Salam  Mən 𝕏𝔸𝕆𝕊 𝔸𝔾𝔼 𝔹𝕆𝕋\n\n⚡ Mən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam.\n⏳ Zamanınızı Əyləncəli Və Səmərəli Keçirmək Üçün Məni Qrupuna Əlavə Edə Bilərsən! ✅*
+    *👋 Salam  Mən ᴅᴛö Game Bot\n\n⚡ Mən ᴅᴛö Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam.\n⏳ Zamanınızı Əyləncəli Və Səmərəli Keçirmək Üçün Məni Qrupuna Əlavə Edə Bilərsən! ✅*
     ${isGroup ? "" : "\n*👮‍♂️ Əsas Əmrlərlə Tanış Olmaq Üçün\n🔹️ KÖMƏK MEYNUSU Butonundan İadifadə Edin*"}
 `)
 
@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("❌ Oyun Başlamadı..\nOyunu Başlat ➡️  /xaosgame")
+		ctx.reply("❌ Oyun Başlamadı..\nOyunu Başlat ➡️  /game")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -239,7 +239,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("❌ Cavab Yoxdur\n✅ Oyun Sonlandırıldı❕\nYenidən Oynamq Üçün  /Xaosgame ")
+				ctx.reply("❌ Cavab Yoxdur\n✅ Oyun Sonlandırıldı❕\nYenidən Oynamq Üçün  /game ")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -267,7 +267,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 
 
 
-bot.command("xaosgame", (ctx) => {
+bot.command("game", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
@@ -392,8 +392,8 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 25).map((member, index) => `$
 
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *👋 Salam  Mən 𝕏𝔸𝕆𝕊 𝔸𝔾𝔼 𝔹𝕆𝕋.\n\n⚡ Mən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam*\nℹ *Bot Yalnız Qruplar Üçün Nəzərdə Tutulub!*\n\n_ℹ️ Qaydalar Budur : Mən Sizə Şəkillər Atıram Və Siz Kateqoriyaya Uyğun Rəqəmlər Təxmin Etməlisiniz\n🕵🏼‍♂️ Əvvəlcə Botu Qrupa Əlavə Edin Və Qrupda Media İcazəni Aktiv Edin Və Ya Botu Admin Edin_\n🗣 _Sonra Əmrlər İlə Tanış Olub Oyuna Başlaya Bilərsiniz_ 🎯\n
-          *Əsas Əmrlərin Siyahısı👇🏻*\n\n🎲 /xaosgame - _Oyunu Başladar_\n⛔️ /stop - _Oyunu Dayandırar_\n📊 /top - _Oyunçuların Xalların Göstərir_\n_🌍 /global - Global Xallar_\nℹ️ /help - _Yardım Meynusu_\n👤 /user- _İstifadəçi Haqqında Məlumat_\n🆔 /id - _Qrup Məlumatı_`))
+        *👋 Salam  Mən ᴅᴛö Game Bot.\n\n⚡ Mən ᴅᴛö Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam*\nℹ *Bot Yalnız Qruplar Üçün Nəzərdə Tutulub!*\n\n_ℹ️ Qaydalar Budur : Mən Sizə Şəkillər Atıram Və Siz Kateqoriyaya Uyğun Rəqəmlər Təxmin Etməlisiniz\n🕵🏼‍♂️ Əvvəlcə Botu Qrupa Əlavə Edin Və Qrupda Media İcazəni Aktiv Edin Və Ya Botu Admin Edin_\n🗣 _Sonra Əmrlər İlə Tanış Olub Oyuna Başlaya Bilərsiniz_ 🎯\n
+          *Əsas Əmrlərin Siyahısı👇🏻*\n\n🎲 /game - _Oyunu Başladar_\n⛔️ /stop - _Oyunu Dayandırar_\n📊 /top - _Oyunçuların Xalların Göstərir_\n_🌍 /global - Global Xallar_\nℹ️ /help - _Yardım Meynusu_\n👤 /user- _İstifadəçi Haqqında Məlumat_\n🆔 /id - _Qrup Məlumatı_`))
 })
 
 bot.command("user", async (ctx) => {
@@ -458,8 +458,8 @@ bot.action('vip', ctx=>{
     ctx.replyWithMarkdown(`*    ⚙️ Kömək *`,{
         reply_markup:{
             inline_keyboard:[
-		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
-		[{text:'👨‍💻 𝕆𝕎ℕ𝔼ℝ 🇦🇿', url:`t.me/sesizKOLGE`}],
+		[{text:'👮‍♂️ 𝐅𝐞𝐝 𝐒𝐚𝐡𝐢𝐛𝐢', url:`t.me/demirofff_052`}],
+		[{text:'👨‍💻 𝐎𝐰𝐧𝐞𝐫', url:`t.me/Thagiyevv`}],
 		[{text:'⚙ ƏMRLƏR', callback_data:'AZ'}],
                 [{text:'🔙 Geri', callback_data:'start'}]
             ]
@@ -470,8 +470,8 @@ bot.action('vip', ctx=>{
 // AZƏRBAYCAN GRUP DÜYMƏLƏRİ
 bot.action('AZ', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*👋 Salam  Mən 𝕏𝔸𝕆𝕊 𝔸𝔾𝔼 𝔹𝕆𝕋\n\n⚡ Mən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Yaş Təxmun Oyun Botuyam*\nℹ *Bot Yalnız Qruplar Üçün Nəzərdə Tutulub!*\n\n_ℹ️ Qaydalar Budur : Mən Sizə Şəkillər Atıram Və Siz Kateqoriyaya Uyğun Rəqəmlər Təxmin Etməlisiniz\n🕵🏼‍♂️ Əvvəlcə Botu Qrupa Əlavə Edin Və Qrupda Media İcazəni Aktiv Edin Və Ya Botu Admin Edin_\n🗣 _Sonra Əmrlər İlə Tanış Olub Oyuna Başlaya Bilərsiniz_ 🎯\n
-          *Əsas Əmrlərin Siyahısı👇🏻*\n\n🎲 /xaosgame - _Oyunu Başladar_\n⛔️ /stop - _Oyunu Dayandırar_\n📊 /top - _Oyunçuların Xalların Göstərir_\n_🌍 /global - Global Xallar_\nℹ️ /help - _Yardım Meynusu_\n👤 /user- _İstifadəçi Haqqında Məlumat_\n🆔 /id - _Qrup Məlumatı_`,{
+    ctx.replyWithMarkdown(`*👋 Salam  Mən ᴅᴛö Game Bot\n\n⚡ Mən 𝐃𝐓𝐎 Federasiyasının Rəsmi Yaş Təxmun Oyun Botuyam*\nℹ *Bot Yalnız Qruplar Üçün Nəzərdə Tutulub!*\n\n_ℹ️ Qaydalar Budur : Mən Sizə Şəkillər Atıram Və Siz Kateqoriyaya Uyğun Rəqəmlər Təxmin Etməlisiniz\n🕵🏼‍♂️ Əvvəlcə Botu Qrupa Əlavə Edin Və Qrupda Media İcazəni Aktiv Edin Və Ya Botu Admin Edin_\n🗣 _Sonra Əmrlər İlə Tanış Olub Oyuna Başlaya Bilərsiniz_ 🎯\n
+          *Əsas Əmrlərin Siyahısı👇🏻*\n\n🎲 /game - _Oyunu Başladar_\n⛔️ /stop - _Oyunu Dayandırar_\n📊 /top - _Oyunçuların Xalların Göstərir_\n_🌍 /global - Global Xallar_\nℹ️ /help - _Yardım Meynusu_\n👤 /user- _İstifadəçi Haqqında Məlumat_\n🆔 /id - _Qrup Məlumatı_`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'👮‍♂️ 𝐅𝐞𝐝 𝐒𝐚𝐡𝐢𝐛𝐢', url:'t.me/demirofff_052'}],
