@@ -426,10 +426,10 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'💻 𝐎 𝐖 𝐍 𝐄 𝐑 🇦🇿', url:`t.me/sesizKOLGE`}],
-		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}], 
-		[{text:'⚡𝕏𝔸𝕆𝕊  𝔽𝔹𝔸ℕ', url:`t.me/XaosResmii`}], 
-		[{text:'⚙ 𝕐𝔸ℝ𝔻𝕀𝕄 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
+                [{text:'💻 𝐎𝐰𝐧𝐞𝐫 ', url:`t.me/Thagiyevv`}],
+		[{text:'👮‍♂️ 𝐅𝐞𝐝 𝐒𝐚𝐡𝐢𝐛𝐢', url:`t.me/demirofff_052`}], 
+		[{text:'⚡ 𝐑ə𝐬𝐦𝐢 𝐊𝐚𝐧𝐚𝐥', url:`t.me/DTOResmii`}], 
+		[{text:'⚙ Kömək ', callback_data:'vip'}]
             ]
         }
     })
@@ -437,15 +437,15 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*👋 Salam Mən 𝕏𝔸𝕆𝕊 𝔸𝔾𝔼 𝔹𝕆𝕋\n\nMən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam\nVaxtınızı Əyləncəli Keçirmək Üçün Məni Qrupa Əlavə Et\n**👮‍♂️ Əsas Əmrlərlə Tanış Olmaq Üçün  KÖMƏK MEYNUSU butonundan İsdifadə Edin*
+    ctx.replyWithMarkdown(`*👋 Salam Mən ᴅᴛö Game Bot\n\nMən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Yaş Təxmin Oyun Botuyam\nVaxtınızı Əyləncəli Keçirmək Üçün Məni Qrupa Əlavə Et\n**👮‍♂️ Əsas Əmrlərlə Tanış Olmaq Üçün  KÖMƏK MEYNUSU butonundan İsdifadə Edin*
         `,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'➕ Botu Qrupa Əlavə Edin ➕', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'👨‍💻 𝕆𝕎ℕ𝔼ℝ 🇦🇿', url:`t.me/sesizKOLGE`}],
-		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
-		[{text:'⚡𝕏𝔸𝕆𝕊  𝔽𝔹𝔸ℕ', url:`t.me/XaosResmii`}], 
-		[{text:'⚙️ 𝕂𝕆𝕄𝔼𝕂 𝕄𝔼𝕐ℕ𝕌𝕊𝕌', callback_data:'vip'}]
+                [{text:'👨‍💻 𝐎𝐰𝐧𝐞𝐫 ', url:`t.me/Thagiyevv`}],
+		[{text:'👮‍♂️ 𝐅𝐞𝐝 𝐒𝐚𝐡𝐢𝐛𝐢', url:`t.me/demirofff_052`}],
+		[{text:'⚡ 𝐑ə𝐬𝐦𝐢 𝐊𝐚𝐧𝐚𝐥', url:`t.me/DTOResmii`}], 
+		[{text:'⚙️ Kömək', callback_data:'vip'}]
             ]
         }
     })
@@ -455,7 +455,7 @@ bot.action('start', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*    ⚙️ 𝕐𝔸ℝ𝔻𝕀𝕄 𝕄𝔼𝕐ℕ𝕌𝕊𝕌*`,{
+    ctx.replyWithMarkdown(`*    ⚙️ Kömək *`,{
         reply_markup:{
             inline_keyboard:[
 		[{text:'👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀', url:`t.me/MR_K4BUS_13`}],
@@ -474,7 +474,7 @@ bot.action('AZ', ctx=>{
           *Əsas Əmrlərin Siyahısı👇🏻*\n\n🎲 /xaosgame - _Oyunu Başladar_\n⛔️ /stop - _Oyunu Dayandırar_\n📊 /top - _Oyunçuların Xalların Göstərir_\n_🌍 /global - Global Xallar_\nℹ️ /help - _Yardım Meynusu_\n👤 /user- _İstifadəçi Haqqında Məlumat_\n🆔 /id - _Qrup Məlumatı_`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'👮‍♂️ FEDERASİYA SAHİBİ', url:'t.me/MR_K4BUS_13'}],
+                [{text:'👮‍♂️ 𝐅𝐞𝐝 𝐒𝐚𝐡𝐢𝐛𝐢', url:'t.me/demirofff_052'}],
                 [{text:'🔙 Geri', callback_data:'start'}]
             ]
         }
